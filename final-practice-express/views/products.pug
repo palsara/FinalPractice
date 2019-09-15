@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  .container
+    .row
+      .col-10
+        table.table.table-striped.table-dark
+          thead
+            tr
+              th #
+              th name
+              th category
+              th price
+              th manufacturer
+              th &nbsp;
+          tbody
+            each product in products
+              tr
+                td #{product.id}
+                td #{product.name}
+                td #{product.category}
+                td #{product.price}
+                td #{product.manufacturer}
+                td 
+                  a.btn.btn-info Show
+                  a.btn.btn-danger Delete
